@@ -1,18 +1,19 @@
-from setuptools import setup, find_packages
+from distutils.core import setup
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 setup(
-    name="TOPSIS-102003105",
-    version="1.0.0",
-    license="MIT",
-    description="A Python package to find TOPSIS for Multi-Criteria Decision Analysis Method",
-    long_description=open('README.txt').read() + '\n\n' +
-    open('CHANGELOG.txt').read(),
-    long_description_content_type="text/markdown",
-    author="Aditya Kuthiala",
-    author_email="adityakuthiala1806@gmail.com",
-    url="https://github.com/AdiK1806/Topsis-Aditya-102003105",
+  name = '102003105',         # How you named your package folder (MyLib)
+  packages = ['102003105'],   # Chose the same as "name"
+  version = '1.0.5',      # Start with a small number and increase it with every change you make
+  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
+  description = 'A Python package to find TOPSIS for Multi-Criteria Decision Analysis Method',   # Give a short description about your library
+   long_description=long_description,
+    long_description_content_type='text/markdown',
+  author = 'Aditya Kuthiala',                   # Type in your name
+  author_email = 'adityakuthiala1806@gmail.com',      # Type in your E-Mail
+  url = 'https://github.com/AdiK1806/Topsis-Aditya-102003105',   # Provide either the link to your github or to your website
     keywords=['topsis', 'TIET' ,'Thapar'],
-    packages=find_packages(),
     include_package_data=True,
     install_requires=['pandas', 'tabulate'],
     classifiers=[
@@ -21,5 +22,5 @@ setup(
         'Operating System :: Microsoft :: Windows :: Windows 10',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3'
-    ]
+    ],
 )
